@@ -1,0 +1,18 @@
+<div class="card" style="width: 600px; padding: 10px; margin: 0 auto; margin-bottom: 30px;">
+    <h5 class="card-header">Lista de tareas</h5>
+    
+    <div class="card-body">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
+            <input class="form-control" type="text" [(ngModel)]="newTask" placeholder="Ej: Hacer mi tarea de Desarrollo Web"/>
+            <button type="button" class="btn btn-outline-primary" (click)="agregarTarea()" style="margin-top: 15px;">Agregar tarea</button>
+        </div>
+
+        <ul class="list-group">
+            <li *ngFor="let task of tasks" class="list-group-item" style="padding: 15px 20px 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+                {{task}}
+                <button type="button" class="btn btn-outline-success" (click)="eliminarTarea(task)">Completar tarea</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
