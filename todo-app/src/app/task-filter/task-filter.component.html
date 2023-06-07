@@ -1,0 +1,9 @@
+<div>
+  <label>Filtro:</label>
+  <select [(ngModel)]="selectedFilter" (change)="applyFilter(selectedFilter)">
+    <option value="all">Todas</option>
+    <option value="completed">Completadas</option>
+    <option value="uncompleted">No completadas</option>
+  </select>
+</div>
+  
